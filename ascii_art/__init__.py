@@ -1,1 +1,0 @@
-"""ASCII Art viewer package for parsing and displaying Google Docs ASCII art."""

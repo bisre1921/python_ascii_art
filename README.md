@@ -1,18 +1,18 @@
-# ASCII Art Viewer 🎨
+# ASCII Art Viewer
 
 A Python tool that extracts and displays ASCII art from published Google Docs documents. The tool parses coordinate-based ASCII art data and renders it beautifully in the terminal with proper orientation and Unicode character support.
 
-## ✨ Features
+## Features
 
-- 🌐 **Google Docs Integration** - Works with published Google Docs URLs (`/pub` format)
-- 🎯 **Smart Parsing** - Automatically detects coordinate patterns (x, char, y) in document text
-- 🔄 **Correct Orientation** - Handles coordinate system conversion for proper display
-- 🎭 **Unicode Support** - Supports special characters like █, ░, ▀, and more
-- 🖼️ **Multiple Display Modes** - Plain, bordered, and debug information views
-- 🏗️ **Clean Architecture** - Modular design with separation of concerns
-- 🚀 **Robust Error Handling** - Comprehensive validation and user-friendly error messages
+-  **Google Docs Integration** - Works with published Google Docs URLs (`/pub` format)
+-  **Smart Parsing** - Automatically detects coordinate patterns (x, char, y) in document text
+-  **Correct Orientation** - Handles coordinate system conversion for proper display
+-  **Unicode Support** - Supports special characters like █, ░, ▀, and more
+-  **Multiple Display Modes** - Plain, bordered, and debug information views
+-  **Clean Architecture** - Modular design with separation of concerns
+-  **Robust Error Handling** - Comprehensive validation and user-friendly error messages
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -93,7 +93,7 @@ TEST/
 └── README.md            # This file
 ```
 
-## 🔧 How It Works
+##  How It Works
 
 1. **Fetch HTML**: Downloads the published Google Docs content using the `/pub` URL
 2. **Extract Text**: Parses HTML to collect all text nodes, ignoring scripts and styles
@@ -105,7 +105,7 @@ TEST/
 
 The tool correctly handles Google Docs' coordinate system where Y=0 is at the bottom (mathematical coordinates) and converts it to display coordinates (Y=0 at top) for proper visual orientation.
 
-## 📝 Examples
+##  Examples
 
 ### Test Case 1: Simple "F" Shape
 ```bash
@@ -124,9 +124,30 @@ Output:
 python main.py --url "https://docs.google.com/document/d/e/2PACX-1vRCzUup1R8CGy3zk7DkdzJyMRvJRPI75Vl3s_9HelL7pr49bzi7-cBxg0zSKwxcWiEvNPxi4Wjj8c0n/pub" --border
 ```
 
-Displays a large "HELLO" ASCII art with decorative border.
+Displays a large "Great Mindset" ASCII art with decorative border.
+========================================================
+|              ASCII Art from Google Docs              |
+========================================================
+| ░██████------------------------------------░██----   |
+| -░██---░██-----------------------------------░██---- |
+| ░██--------░██░████--░███████---░██████---░████████- |
+| ░██--█████-░███-----░██----░██-------░██-----░██---- |
+| ░██-----██-░██------░█████████--░███████-----░██---- |
+| -░██--░███-░██------░██--------░██---░██-----░██---- |
+| --░█████░█-░██-------░███████---░█████░██-----░████- |
+| ---------------------------------------------------- |
+| ---------------------------------------------------- |
+| ---------------------------------------------------- |
+| ░███-----░███-░██------------------░██-------------- |
+| ░████---░████----------------------░██-------------- |
+| ░██░██-░██░██-░██░████████---░████████--░███████---- |
+| ░██-░████-░██-░██░██----░██-░██----░██-░██---------- |
+| ░██--░██--░██-░██░██----░██-░██----░██--░███████---- |
+| ░██-------░██-░██░██----░██-░██---░███--------░██--- |
+| ░██-------░██-░██░██----░██--░█████░██--░███████     |
+========================================================
 
-## 🏗️ Architecture
+## Architecture
 
 The project follows a clean 3-layer architecture:
 
@@ -134,7 +155,7 @@ The project follows a clean 3-layer architecture:
 - **Infrastructure Layer**: External services and data access (`HTMLFetcher`, `GoogleDocParser`)  
 - **Presentation Layer**: User interfaces and CLI (`ArgumentParser`, `CLI`)
 
-## 🛠️ Development
+## Development
 
 ### Key Components
 
@@ -151,7 +172,7 @@ The project follows a clean 3-layer architecture:
 - Coordinate parsing validation
 - Graceful handling of malformed data
 
-## 🔍 Debugging
+## Debugging
 
 Enable debug mode to see detailed parsing information:
 
@@ -165,28 +186,11 @@ This shows:
 - Coordinate parsing steps
 - Grid construction statistics
 
-## 📋 Requirements
+##  Requirements
 
 - Python 3.7+
 - requests>=2.25.0
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🙏 Acknowledgments
-
-- Google Docs for providing the published document format
-- Unicode Consortium for block character standards
-- Python community for excellent built-in libraries
 
 ---
 
